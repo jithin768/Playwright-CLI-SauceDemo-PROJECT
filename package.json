@@ -1,0 +1,20 @@
+{
+  "name": "playwright-cli-kent-project",
+  "version": "1.0.0",
+  "description": "Playwright automation for Kent website validation",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ci": "playwright test --project=chromium --grep-invert @local-only",
+    "test:kent": "playwright test tests/kent.spec.ts --project=chromium --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^25.6.0"
+  }
+}
