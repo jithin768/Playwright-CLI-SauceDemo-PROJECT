@@ -62,4 +62,4 @@ The GitHub Actions workflow (`.github/workflows/playwright.yml`):
 
 ## 🔗 GitHub Repository
 
-[https://github.com/jithin768/Playwright-CLI-SauceDemo-Project](https://github.com/jithin768/Playwright-CLI-SauceDemo-Project)
+[https://github.com/jithin768/Playwright-CLI-SauceDemo-PROJECT](https://github.com/jithin768/Playwright-CLI-SauceDemo-PROJECT)
