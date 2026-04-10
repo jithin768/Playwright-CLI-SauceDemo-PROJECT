@@ -8,7 +8,7 @@
     "test:headed": "playwright test --headed",
     "test:headless": "playwright test --project=chromium --grep-invert @local-only",
     "test:ci": "playwright test --project=chromium --grep-invert @local-only",
-    "test:kent": "playwright test tests/kent.spec.ts --project=chromium --headed"
+    "test:saucedemo": "playwright test tests/saucedemo.spec.ts --project=chromium"
   },
   "keywords": [],
   "author": "",
