@@ -6,7 +6,6 @@ Playwright automation for validating key flows on `https://www.saucedemo.com/`.
 
 - `tests/example.spec.ts` — basic Playwright smoke sample
 - `tests/saucedemo.spec.ts` — SauceDemo login, add-to-cart, and checkout validation
-- `tests/kent.spec.ts` — local-only Kent account and About Us validation (requires credentials)
 - `.github/workflows/playwright.yml` — GitHub Actions CI pipeline
 
 ## 🚀 Getting started
