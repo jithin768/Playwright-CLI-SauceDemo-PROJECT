@@ -1,11 +1,12 @@
 {
-  "name": "playwright-cli-kent-project",
+  "name": "playwright-cli-saucedemo-project",
   "version": "1.0.0",
-  "description": "Playwright automation for Kent website validation",
+  "description": "Playwright automation for SauceDemo website validation",
   "main": "index.js",
   "scripts": {
     "test": "playwright test",
     "test:headed": "playwright test --headed",
+    "test:headless": "playwright test --project=chromium --grep-invert @local-only",
     "test:ci": "playwright test --project=chromium --grep-invert @local-only",
     "test:kent": "playwright test tests/kent.spec.ts --project=chromium --headed"
   },

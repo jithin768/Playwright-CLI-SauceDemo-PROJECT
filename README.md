@@ -1,24 +1,13 @@
-# Playwright CLI KENT Project
+# Playwright CLI SauceDemo Project
 
-Playwright automation for validating key flows on `https://kent.ca/en/`.
+Playwright automation for validating key flows on `https://www.saucedemo.com/`.
 
 ## ✅ What is included
 
 - `tests/example.spec.ts` — basic Playwright smoke sample
-- `tests/kent.spec.ts` — local-only Kent account and About Us validation
+- `tests/saucedemo.spec.ts` — SauceDemo login, add-to-cart, and checkout validation
+- `tests/kent.spec.ts` — local-only Kent account and About Us validation (requires credentials)
 - `.github/workflows/playwright.yml` — GitHub Actions CI pipeline
-
-## ⚠️ Important note about Kent login
-
-Kent protects sign-in with reCAPTCHA. Because of that, the login scenario is tagged `@local-only` and is **excluded from CI/headless pipeline runs**.
-
-Use it locally with environment variables:
-
-```powershell
-$env:KENT_EMAIL="your-email@example.com"
-$env:KENT_PASSWORD="your-password"
-npm run test:kent
-```
 
 ## 🚀 Getting started
 
@@ -35,35 +24,43 @@ npx playwright install
 npm run test:ci
 ```
 
+### Run headless in Chromium
+
+```powershell
+npm run test:headless
+```
+
 ### Run all configured tests
 
 ```powershell
 npm test
 ```
 
-### Run the Kent flow locally in headed Chromium
+### Run the SauceDemo flow locally
 
 ```powershell
-$env:KENT_EMAIL="your-email@example.com"
-$env:KENT_PASSWORD="your-password"
-npm run test:kent
+npm run test:saucedemo
 ```
 
 ## 📁 Artifacts
 
-When the Kent test is run locally, artifacts are saved under:
+Artifacts captured during SauceDemo automation:
 
-- `test-results/.../kent-artifacts/trace.zip`
-- `test-results/.../kent-artifacts/account-dashboard.png`
-- `test-results/.../kent-artifacts/about-us.png`
-- `test-results/.../kent-artifacts/KENT.WEBM`
+- `trace.zip` — Playwright trace (open with `npx playwright show-trace trace.zip`)
+- `login-success.png` — Screenshot after login
+- `checkout-complete.png` — Screenshot after checkout
+- `saucedemo.webm` — Video recording of the full checkout flow
 
 ## 🔄 CI/CD
 
-The GitHub Actions workflow:
+The GitHub Actions workflow (`.github/workflows/playwright.yml`):
 
 1. Checks out the code
 2. Installs Node.js dependencies
 3. Installs Playwright Chromium
 4. Runs `npm run test:ci`
 5. Uploads the Playwright report and test results as artifacts
+
+## 🔗 GitHub Repository
+
+[https://github.com/jithin768/Playwright-CLI-KENT-PROJECT](https://github.com/jithin768/Playwright-CLI-KENT-PROJECT)
