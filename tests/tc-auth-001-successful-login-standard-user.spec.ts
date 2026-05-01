@@ -3,6 +3,8 @@
 
 import { test, expect } from '@playwright/test';
 
+
+//Login Test Case: TC-AUTH-001: Successful login with standard_user
 test.describe('Authentication — Login', () => {
   test('TC-AUTH-001: Successful login with standard_user', async ({ page }) => {
     // 1. Navigate to https://www.saucedemo.com/
