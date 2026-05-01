@@ -9,6 +9,7 @@ test.describe('Authentication — Login', () => {
     await page.goto('https://www.saucedemo.com/');
   });
 
+  //Adding a comment here to test commit and push functionality of GitHub
   test('TC-AUTH-002: Login with locked_out_user is blocked', async ({ page }) => {
     // Enter locked_out_user in the Username field
     await page.locator('[data-test="username"]').fill('locked_out_user');
